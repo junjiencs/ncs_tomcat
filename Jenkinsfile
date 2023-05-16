@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         //ROOT_PATH  =  "/apache-tomcat-9.0.58"
-        ROOT_PATH  =  "C:/Users/D1357846/Downloads/apache-tomcat-10.1.8"
+        ROOT_PATH  =  "/Tomcat 10.1"
         APP_PATH   =  "$ROOT_PATH/webapps"
         TEMP_DIR   =  "${env.WORKSPACE}/web-thymeleaf-war"
     }
@@ -29,7 +29,7 @@ pipeline {
                 echo "Stop catalina"
                 sh '''
 
-                  cd $ROOT_PATH
+                  cd $ROOT_PATH.execute().text
                   pwd
                   ./bin/catalina.sh stop
 
