@@ -27,6 +27,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Stop catalina"
+                sh "echo ${ROOT_PATH}"
                 sh '''
 
                   cd $ROOT_PATH.execute().text
