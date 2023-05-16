@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'ls -la ${env.WORKSPACE}
                 echo 'Compile..'
                 echo "workspace ${env.WORKSPACE}" 
                 echo "BuildNumber :: ${env.BUILD_NUMBER}"
