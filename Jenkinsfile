@@ -13,7 +13,7 @@ pipeline {
                 echo "BuildNumber :: ${env.BUILD_NUMBER}"
                 
                 echo "generating war file"
-                bat "mvn clean package"
+                bat "mvn -f /web-thymeleaf-war/pom.xml clean package"
             }
         }
         stage('Test') {
